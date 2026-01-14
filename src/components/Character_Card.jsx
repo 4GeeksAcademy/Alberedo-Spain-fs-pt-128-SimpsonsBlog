@@ -3,7 +3,7 @@ import useGlobalReducer from "../hooks/useGlobalReducer";
 import { Link } from "react-router-dom";
 
 
- export const CDN = `${import.meta.env.VITE_CDN}`
+ export const CDN = "https://cdn.thesimpsonsapi.com/"
 
 
 
