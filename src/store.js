@@ -16,9 +16,9 @@ export const initialStore = () => {
     characters: null,
     episodes: [],
     locations: [],
-    fav_characters:[],
-    fav_episodes:[],
-    fav_locations:[]
+    fav_characters: [],
+    fav_episodes: [],
+    fav_locations: []
   }
 }
 
@@ -54,12 +54,47 @@ export default function storeReducer(store, action = {}) {
         episodes: action.payload
 
       };
-
-    case 'delete_favorite':
+    case 'addCharacterFav':
 
       return {
+        ...store,
+        fav_characters: [...store.fav_characters, action.payload]
+      };
+    case 'deleteCharacterFav':
 
-      }
+      return {
+        ...store,
+        fav_characters: [...store.fav_characters.filter((char) => { return char != action.payload })]
+      };
+
+    case 'addLocationFav':
+
+      return {
+        ...store,
+        fav_locations: [...store.fav_locations, action.payload]
+
+      };
+    case 'deleteLocationFav':
+
+      return {
+        ...store,
+        fav_locations: [...store.fav_locations.filter((location) => { return location != action.payload })]
+      };
+
+    case 'addEpisodeFav':
+
+      return {
+        ...store,
+        fav_episodes: [...store.fav_episodes, action.payload]
+
+      };
+    case 'deleteEpisodeFav':
+
+      return {
+        ...store,
+        fav_episodes: [...store.fav_episodes.filter((episode) => { return episode != action.payload })]
+      };
+
       throw Error('Unknown action.');
   }
 }

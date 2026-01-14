@@ -26,7 +26,28 @@ h1{
 
 .bg{
     background-image: url("https://thesimpsonsapi.com/clouds-bg.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat-y;
     background-position: center;
+}
+
+.scrollable::-webkit-scrollbar {
+    color: black;
+   background: #fcd20000;
+   border-radius: 10px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background: #ffc107;
+  border-radius: 10px;
+  border: 3px solid #1f1f1f;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #ffb300;
+}
+.separator{
+    width: 90%;
+    height: 3px;
+    background-color: #ffc107;
+    margin-inline: auto;
 }

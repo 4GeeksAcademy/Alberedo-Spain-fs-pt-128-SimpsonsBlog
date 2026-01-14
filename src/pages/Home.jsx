@@ -19,9 +19,9 @@ export const Home = () => {
 	}, [])
 	return (
 		<div className="bg pt-4">
-			<div className="overflow-hidden px-5">
+			<div className="overflow-hidden px-5 container">
 				<h1>Characters</h1>
-				<div className="d-flex overflow-auto mb-5">
+				<div className="d-flex overflow-auto mb-5 scrollable">
 					{store.characters && store.characters.map((character) => {
 						return (
 
@@ -31,7 +31,7 @@ export const Home = () => {
 					})}
 				</div>
 				<h1>Episodes</h1>
-				<div className="d-flex overflow-auto mb-5">
+				<div className="d-flex overflow-auto mb-5 scrollable">
 					{store.episodes && store.episodes.map((episode) => {
 						return (
 
@@ -41,7 +41,7 @@ export const Home = () => {
 					})}
 				</div>
 				<h1>Locations</h1>
-				<div className="d-flex overflow-auto mb-5">
+				<div className="d-flex overflow-auto mb-5 scrollable">
 					{store.locations && store.locations.map((location) => {
 						return (
 
