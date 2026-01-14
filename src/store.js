@@ -15,7 +15,10 @@ export const initialStore = () => {
     ],
     characters: null,
     episodes: [],
-    locations: []
+    locations: [],
+    fav_characters:[],
+    fav_episodes:[],
+    fav_locations:[]
   }
 }
 
@@ -41,13 +44,16 @@ export default function storeReducer(store, action = {}) {
     case 'set_locations':
 
       return {
-
-      }
+        ...store,
+        locations: action.payload
+      };
     case 'set_episodes':
 
       return {
+        ...store,
+        episodes: action.payload
 
-      }
+      };
 
     case 'delete_favorite':
 
