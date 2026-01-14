@@ -23,19 +23,19 @@ const Episode_Info = () => {
 
         <>
             <div className="row container mx-auto m-5">
-                <div className="col-6">
+                <div className="col-12 col-md-6">
                     <img className="object-fit-contain w-100" src={`${CDN}500${data.image_path}`} />
                 </div>
-                <div className="col-6 text-center">
+                <div className="col-12 col-md-6 text-center">
                     <div><h2>{data.name}</h2></div>
                     <div><p>{data.description}</p></div>
                 </div>
                 <div className="separator" />
                 <div className="row mt-3 justify-content-around">
-                    {data.airdate && <div className="col-2 text-center"><h5>Airdate</h5>{data && data.airdate}</div>}
-                    {data.season &&<div className="col-2 text-center"><h5>Season</h5>{data && data.season}</div>}
-                    {data.episode_number &&<div className="col-2 text-center"><h5>Episode number</h5>{data && data.episode_number}</div>}
-                    {data.synopsis &&<div className="col-6 text-center"><h5>Synopsis</h5>{data && data.synopsis}</div>}
+                    {data.airdate && <div className="col-12 col-md-2 text-center"><h5>Airdate</h5>{data && data.airdate}</div>}
+                    {data.season &&<div className="col-6 col-md-2 text-center"><h5>Season</h5>{data && data.season}</div>}
+                    {data.episode_number &&<div className="col-6 col-md-2 text-center"><h5>Episode</h5>{data && data.episode_number}</div>}
+                    {data.synopsis &&<div className="col-12 col-md-6 text-center"><h5>Synopsis</h5>{data && data.synopsis}</div>}
                 </div>
             </div>
         </>
